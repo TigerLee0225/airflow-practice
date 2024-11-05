@@ -87,8 +87,8 @@ jobs:
               astro dev stop && astro dev kill
 
               echo "⭐️ airflow plugins 폴더 권한 변경 완료"
-              sudo chown ubuntu plugins
-              sudo chgrp ubuntu plugins
+              sudo chown yblee plugins
+              sudo chgrp yblee plugins
 
               echo "⭐️ conda 환경 변수 적용 완료"
               conda init
