@@ -66,7 +66,7 @@ jobs:
               PUBLIC_KEY=$(cat ~/.ssh/id_rsa.pub)
               curl -H "Authorization: token ${{ secrets.TOKEN }}" \
                   -X POST \
-                  -d "{\"title\":\"airflow\",\"key\":\"$PUBLIC_KEY\"}" \
+                  -d "{\"title\":\"airflow-practice-deployment\",\"key\":\"$PUBLIC_KEY\"}" \
                   https://api.github.com/user/keys
 
               echo "⭐️ Astronomer 설치 및 Airflow 시작"
