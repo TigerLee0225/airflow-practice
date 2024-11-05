@@ -27,9 +27,10 @@ with DAG(
         
         email_operator = EmailOperator(
             task_id='send_email_task', # task_id와 변수명 일치시키기
-            to='dohk.gcp@gmail.com',
+            to='billybob6131@gmail.com',
             subject='[Airflow] ✅ Success !',
-            html_content=f' DAG: {{ task_instance.dag_id }}<br> Task: {{ task_instance.task_id }}<br> Execution Time: {{ ts }}<br> Log URL: {{ task_instance.log_url }}<br> log: { merged_log_contents }'
+            html_content=f' DAG: {{ task_instance.dag_id }}<br> Task: {{ task_instance.task_id }}<br> Execution Time: {{ ts }}<br> Log URL: {{ task_instance.log_url }}<br> log: { merged_log_contents }',
+            mime_charset='utf-8'  # MIME 인코딩 설정
             # cc="" # 참조
         )
         email_operator.execute(context=kwagrs)
